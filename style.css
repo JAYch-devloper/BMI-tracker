@@ -1,8 +1,10 @@
+
+/* --- General Body and Bright Theme --- */
 body {
-    background-color: #212529; /* Dark grey background */
-    color: #f8f9fa; /* Light text color for contrast */
+    background-color: #FFFFFF; /* NEW: Clean white background */
+    color: #333333; /* NEW: Dark text for high contrast and readability */
     font-family: 'Inter', sans-serif;
-    padding-top: 56px; /* Adjust for fixed navbar */
+    padding-top: 56px;
 }
 
 /* --- Navigation Bar --- */
@@ -12,7 +14,9 @@ body {
 
 /* --- Hero Section --- */
 .hero {
-    background: linear-gradient(rgba(95, 90, 90, 0.6), rgba(194, 24, 24, 0.6)), url('https://placehold.co/1920x1080/343a40/495057?text=Health+Background') no-repeat center center/cover;
+    /* UPDATED: Switched to a bright, positive gradient.
+       Remember to replace the placeholder URL with a bright, high-quality image. */
+    background: linear-gradient(to right, rgba(32, 201, 151, 0.8), rgba(23, 162, 184, 0.8)), url('https://i.pinimg.com/1200x/af/9c/39/af9c3961cf6faa905f702151c1162e2f.jpg') no-repeat center center/cover;
     height: 75vh;
     min-height: 400px;
 }
@@ -20,39 +24,43 @@ body {
 /* --- Custom Button --- */
 .custom-btn {
     padding: 12px 30px;
-    font-weight: 500;
+    font-weight: 600; /* Bolder text */
     border-radius: 50px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    transition: all 0.5s ease;
+    background-color: #20c997; /* NEW: Primary accent color */
+    color: #FFFFFF; /* NEW: White text */
+    border: 2px solid #20c997;
 }
 
 .custom-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.4); /* UPDATED: Shadow matches new color */
+    background-color: #17a2b8; /* UPDATED: Hover color */
+    border-color: #17a2b8;
 }
 
 /* --- Calculator Section --- */
 #calculator {
-    background-color: #2c3034;
+    background-color: #f8f9fa; /* NEW: Light grey for section separation */
 }
 
 .calculator-card {
-    background-color: #343a40;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 1px solid #495057;
+    background-color: #FFFFFF; /* NEW: White card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* UPDATED: Softer shadow */
+    border: 1px solid #EAEAEA; /* UPDATED: Light border */
 }
 
 .form-control {
-    background-color: #495057;
-    border: 1px solid #6c757d;
-    color: #f8f9fa;
+    background-color: #FFFFFF; /* NEW */
+    border: 1px solid #ced4da; /* NEW */
+    color: #333333; /* NEW */
 }
 
 .form-control:focus {
-    background-color: #495057;
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    color: #f8f9fa;
+    background-color: #FFFFFF;
+    border-color: #424e4b; /* UPDATED: Primary accent color */
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25); /* UPDATED */
+    color: #333333;
 }
 
 .form-control::placeholder {
@@ -61,138 +69,117 @@ body {
 
 #result {
     font-weight: bold;
-    color: #0d6efd; /* Highlight result in primary color */
+    color: #45685d; /* UPDATED: Primary accent color */
 }
 
 /* --- About Section --- */
 #about {
-    background-color: #212529;
-}
-
-.table-dark {
-    --bs-table-bg: #343a40;
-    --bs-table-border-color: #495057;
-}
-#about {
-    background-color: #f8f9fa; /* Light background for this section */
+    background-color: #FFFFFF; /* NEW: Clean white background */
     padding: 5rem 0;
 }
 
-#about h2 {
-    color: #2c3e50;
-    font-weight: 700;
-    margin-bottom: 1rem;
+#about h2{
+        font-family:Georgia, serif;
+    color: #168b8f; /* Consistent dark text */
+}
+#about h5, #about p.lead {
+        font-family:Georgia, serif;
+    color: #333; /* Consistent dark text */
 }
 
-#about p.lead {
-    color: #555;
-    margin-bottom: 2rem;
+#about h5 {
+    font-family:Georgia, serif;
+    font-weight: 100; /* Increased weight for better readability */
+}
+.limitaions {
+    font-weight: 100; /* Increased weight for better readability */
+    color: #6c757d; /* Muted text color */
+}
+
+.general-graph {
+    width: 90%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 4px;
 }
 
 #about .table {
-    border-radius: 1rem; /* Rounded corners for the table */
-    overflow: hidden; /* Ensures rounded corners apply to content */
+    border-radius: 1rem;
+    overflow: hidden;
+    /* For a light theme, remove the .table-dark class from your HTML table */
 }
 
-/* Modal Specific Styles (for both Login and Signup modals) */
+/* --- Modal Styles --- */
+/* The existing modal style is already light and looks good, we'll just update the accent colors */
 .modal-content {
-    border-radius: 1rem; /* More rounded corners for the modal */
-    overflow: hidden; /* Ensures background image doesn't spill */
-    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%); /* Subtle gradient background */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .modal-header {
-    border-bottom: none; /* Remove default border */
-    padding: 1.5rem 2rem 0.5rem 2rem; /* Adjust padding */
-    position: relative;
-    z-index: 1; /* Ensure header content is above any potential background elements */
+    border-bottom: none;
+    padding: 1.5rem 2rem 0.5rem 2rem;
 }
 .modal-title {
-    font-weight: 700; /* Bolder title */
-    color: #2c3e50; /* Darker text for contrast */
+    font-weight: 700;
+    color: #2c3e50;
     font-size: 1.8rem;
 }
 .modal-body {
-    padding: 1.5rem 2rem 2rem 2rem; /* Adjust padding */
+    padding: 1.5rem 2rem 2rem 2rem;
 }
 .form-label {
-    font-weight: 600; /* Bolder labels */
+    font-weight: 600;
     color: #34495e;
-    margin-bottom: 0.5rem;
 }
 .form-control-lg {
-    border-radius: 0.75rem; /* More rounded corners for inputs */
-    padding: 0.75rem 1.25rem; /* Larger padding for inputs */
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
     border: 1px solid #ced4da;
-    transition: all 0.3s ease; /* Smooth transition for focus */
+    transition: all 0.3s ease;
 }
 .form-control-lg:focus {
-    border-color: #007bff; /* Blue border on focus */
-    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
-    background-color: #f8f9fa; /* Slightly darker background on focus */
+    border-color: #20c997; /* UPDATED */
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25); /* UPDATED */
 }
-.btn-primary { /* Applies to modal buttons as well */
-    border-radius: 0.75rem; /* More rounded corners for buttons */
-    padding: 0.75rem 1.5rem; /* Larger padding for buttons */
-    font-weight: 700; /* Bolder button text */
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient for the button */
+.btn-primary {
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #15644c, #0d5560); /* UPDATED */
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3); /* UPDATED */
     transition: all 0.3s ease;
 }
 .btn-primary:hover {
-    background: linear-gradient(45deg, #0056b3, #007bff); /* Reverse gradient on hover */
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4); /* Deeper shadow on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background: linear-gradient(45deg, #17a2b8, #3a8f75); /* UPDATED */
+    box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4); /* UPDATED */
+    transform: translateY(-2px);
 }
 .text-muted a {
     font-weight: 600;
-}
-
-/* Styles for the illustrative image/icon in the modal */
-.modal-illustration {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-.modal-illustration img {
-    max-width: 120px;
-    height: auto;
-    border-radius: 50%; /* Circular image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    padding: 0.5rem;
+    color: #20c997; /* UPDATED */
 }
 .modal-illustration .icon {
-    font-size: 4rem; /* Large icon size */
-    color: #007bff; /* Blue color for the icon */
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    color: #20c997; /* UPDATED */
 }
 
-/* Responsive adjustments */
+/* --- Responsive Adjustments (No changes needed) --- */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .calculator-card {
-        padding: 2rem;
-    }
-    .modal-dialog {
-        margin: 1rem; /* Adjust modal margin on small screens */
-    }
-    .modal-body {
-        padding: 1rem 1.5rem;
-    }
-    .modal-title {
-        font-size: 1.5rem;
-    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1rem; }
+    .calculator-card { padding: 2rem; }
+    .modal-dialog { margin: 1rem; }
+    .modal-body { padding: 1rem 1.5rem; }
+    .modal-title { font-size: 1.5rem; }
 }
-
-
 
 /* --- Footer --- */
 footer {
-    background-color: #1a1d20 !important;
+    background-color: #f8f9fa !important; /* NEW: Light footer */
+    color: #333 !important; /* NEW */
+    padding: 2rem 0; /* Optional: Add some padding */
+    text-align: center; /* Optional */
 }
