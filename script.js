@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const bmiForm = document.getElementById('bmiForm');
     const resultDiv = document.getElementById('result');
