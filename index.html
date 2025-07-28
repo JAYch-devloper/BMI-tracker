@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="images/icon.jpeg" >
+
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">BMI Tracker</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/icon.jpeg" alt="BMI Tracker Logo" width="100" height="100" class="me-2 rounded-4">
+                <span class="fw-bold text-white">BMI Tracker</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,9 +44,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                     </li>
-                    <!-- Signup Button in Navbar -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Track</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +56,8 @@
     <header class="hero text-white text-center d-flex align-items-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Track Your BMI, Shape Your Health</h1>
-            <p class="lead my-4">A simple and effective way to monitor your Body Mass Index. <br>Start your journey towards a healthier lifestyle today.</p>
+            <p class="lead my-4">A simple and effective way to monitor your Body Mass Index. <br>Start your journey
+                towards a healthier lifestyle today.</p>
             <a href="#calculator" class="btn btn-primary btn-lg custom-btn">Calculate Your BMI</a>
         </div>
     </header>
@@ -65,11 +73,13 @@
                             <div class="row g-3">
                                 <div class="col-md-6 mb-3">
                                     <label for="height" class="form-label">Height (cm)</label>
-                                    <input type="number" class="form-control form-control-lg" id="height" placeholder="Enter your height" required>
+                                    <input type="number" class="form-control form-control-lg" id="height"
+                                        placeholder="Enter your height" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="weight" class="form-label">Weight (kg)</label>
-                                    <input type="number" class="form-control form-control-lg" id="weight" placeholder="Enter your weight" required>
+                                    <input type="number" class="form-control form-control-lg" id="weight"
+                                        placeholder="Enter your weight" required>
                                 </div>
                             </div>
                             <div class="d-grid mt-4">
@@ -88,11 +98,17 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2>What is BMI?</h2>
-                <p class="lead">Body Mass Index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.</p>
+                <p class="lead">Body Mass Index (BMI) is a measure that uses your height and weight to work out if your
+                    weight is healthy.</p>
             </div>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <table class="table table-dark table-striped table-hover rounded-3 overflow-hidden">
+
+            <div class="row align-items-center mb-5">
+                <div class="col-md-4 text-center">
+                    <img src="images\WhatsApp Image 2025-07-24 at 9.23.06 PM.jpeg" class="img-fluid rounded-3 mb-4"
+                        alt="BMI info image">
+                </div>
+                <div class="col-md-8">
+                    <table class="table table-striped table-hover rounded-3 overflow-hidden">
                         <thead>
                             <tr>
                                 <th scope="col">BMI Range</th>
@@ -120,6 +136,41 @@
                     </table>
                 </div>
             </div>
+
+            <h5 class="text-center">The BMI Calculator helps assess your Body Mass Index (BMI), which is a measure of
+                body fat based on
+                height and weight. As shown in the chart below, BMI values are calculated by combining your height and
+                weight measurements to determine which health category you fall into. It's a simple yet effective tool
+                widely used to identify weight categories that may lead to health problems.</h5>
+            <img class="general-graph d-block mx-auto mt-4" src="images\bmi-chart.avif" alt="BMI Graph">
+
+            <div class="text-center mt-5">
+                <h2>Limitations of BMI</h2>
+                <h5 class="cons">While BMI is a useful tool, it has limitations. It does not account for muscle mass,
+                    bone density, overall body composition, and racial and sex differences. For example, athletes with
+                    high muscle mass may have a high BMI but not an unhealthy amount of body fat.</h5>
+                <h5>It’s important to use BMI as one part of a broader health assessment, alongside other factors like
+                    waist-to-hip ratio, diet, physical activity, and overall wellness.</h5>
+            </div>
+
+            <div class="text-center mt-5">
+                <h2>Why Monitor Your BMI?</h2>
+                <h5>Monitoring your BMI can help you maintain a healthy weight, which is crucial for reducing the risk
+                    of chronic conditions such as heart disease, diabetes, and hypertension. It also encourages better
+                    awareness of your physical health and promotes proactive lifestyle adjustments.</h5>
+                <h5>Regularly checking your BMI, especially during life stages like menopause or aging, can help you
+                    better understand how your body changes over time and adapt accordingly.</h5>
+                <div class="img-center mt-5">
+                    <img class="img-fluid w-100 d-block mx-auto rounded-3"
+                        src="images\WhatsApp Image 2025-07-25 at 12.06.15 PM.jpeg" alt="design image">
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h2>References</h2>
+                <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank">World
+                    Health Organization - BMI Calculator</a>
+            </div>
         </div>
     </section>
 
@@ -138,24 +189,28 @@
                     <form>
                         <div class="mb-3">
                             <label for="modalSignupUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control form-control-lg" id="modalSignupUsername" placeholder="Choose a username" required>
+                            <input type="text" class="form-control form-control-lg" id="modalSignupUsername"
+                                placeholder="Choose a username" required>
                         </div>
                         <div class="mb-3">
                             <label for="modalSignupEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-lg" id="modalSignupEmail" placeholder="Enter your email address" required>
+                            <input type="email" class="form-control form-control-lg" id="modalSignupEmail"
+                                placeholder="Enter your email address" required>
                         </div>
                         <div class="mb-3">
                             <label for="modalSignupPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control form-control-lg" id="modalSignupPassword" placeholder="Create a strong password" required>
+                            <input type="password" class="form-control form-control-lg" id="modalSignupPassword"
+                                placeholder="Create a strong password" required>
                         </div>
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
                         </div>
                     </form>
                     <p class="text-center text-muted mt-4">
-                        Already have an account? <a href="#" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Log in here</a>
+                        Already have an account? <a href="#" class="text-primary" data-bs-dismiss="modal"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">Log in here</a>
                     </p>
-                   
+
                 </div>
             </div>
         </div>
@@ -176,20 +231,23 @@
                     <form>
                         <div class="mb-3">
                             <label for="modalLoginEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-lg" id="modalLoginEmail" placeholder="Enter your email address" required>
+                            <input type="email" class="form-control form-control-lg" id="modalLoginEmail"
+                                placeholder="Enter your email address" required>
                         </div>
                         <div class="mb-3">
                             <label for="modalLoginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control form-control-lg" id="modalLoginPassword" placeholder="Enter your password" required>
+                            <input type="password" class="form-control form-control-lg" id="modalLoginPassword"
+                                placeholder="Enter your password" required>
                         </div>
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn btn-primary btn-lg">Log In</button>
                         </div>
                     </form>
                     <p class="text-center text-muted mt-4">
-                        Don't have an account? <a href="#" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up here</a>
+                        Don't have an account? <a href="#" class="text-primary" data-bs-dismiss="modal"
+                            data-bs-toggle="modal" data-bs-target="#signupModal">Sign up here</a>
                     </p>
-                    
+
                 </div>
             </div>
         </div>
@@ -200,4 +258,5 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
