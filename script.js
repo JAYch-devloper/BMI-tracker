@@ -43,4 +43,74 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const signupForm = document.getElementById('signupForm');
 
+    if (signupForm) {
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('modalSignupUsername').value;
+            const email = document.getElementById('modalSignupEmail').value;
+
+            // Save basic info in localStorage
+            localStorage.setItem('user', JSON.stringify({ username, email }));
+
+            // Redirect to chart page (make sure this file exists)
+            window.location.href = 'track.html';
+        });
+    }
+});
+
+// track page
+const bmiHistory = JSON.parse(localStorage.getItem('bmiHistory')) || [];
+
+        const labels = bmiHistory.map(entry => entry.date);
+        const data = bmiHistory.map(entry => entry.bmi);
+
+        const ctx = document.getElementById('bmiChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'BMI Over Time',
+                    data: data,
+                    fill: false,
+                    borderColor: 'rgba(37, 99, 235, 1)',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    tension: 0.3,
+                    pointRadius: 5,
+                    pointHoverRadius: 8,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: context => `BMI: ${context.raw}`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'BMI Value'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    }
+                }
+            }
+        });
