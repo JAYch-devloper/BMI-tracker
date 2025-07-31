@@ -269,7 +269,7 @@
                 </div>
             </div>
         </section>
-            <img class="img-fluid rounded-4 d-block mx-auto mb-4 w-25" src="C:\Programming\BMI tracker\images\WhatsApp Image 2025-07-25 at 12.06.15 PM.jpeg">
+            <img class="img-fluid rounded-4 d-block mx-auto mb-4 w-25" src="images\WhatsApp Image 2025-07-25 at 12.06.15 PM.jpeg">
             <div class="text-center mt-5">
                 <h2>References</h2>
                 <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank">World
@@ -278,45 +278,50 @@
         </div>
     </section>
 
-    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="signupModalLabel">Create Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Create Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-3">
+                    <i class="fas fa-user-plus icon fa-2x"></i>
                 </div>
-                <div class="modal-body">
-                    <div class="text-center mb-3">
-                         <i class="fas fa-user-plus icon"></i>
+
+                <!-- signup -->
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="modalSignupUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control form-control-lg" id="modalSignupUsername"
+                            placeholder="Choose a username" required>
                     </div>
-                    <form>
-                        <div class="mb-3">
-                            <label for="modalSignupUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control form-control-lg" id="modalSignupUsername"
-                                placeholder="Choose a username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="modalSignupEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-lg" id="modalSignupEmail"
-                                placeholder="Enter your email address" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="modalSignupPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control form-control-lg" id="modalSignupPassword"
-                                placeholder="Create a strong password" required>
-                        </div>
-                        <div class="d-grid mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-                        </div>
-                    </form>
-                    <p class="text-center text-muted mt-4">
-                        Already have an account? <a href="#" class="text-primary" data-bs-dismiss="modal"
-                            data-bs-toggle="modal" data-bs-target="#loginModal">Log in here</a>
-                    </p>
-                </div>
+                    <div class="mb-3">
+                        <label for="modalSignupEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-lg" id="modalSignupEmail"
+                            placeholder="Enter your email address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalSignupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="modalSignupPassword"
+                            placeholder="Create a strong password" required>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                    </div>
+                </form>
+
+                <p class="text-center text-muted mt-4">
+                    Already have an account?
+                    <a href="#" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Log in here
+                    </a>
+                </p>
             </div>
         </div>
     </div>
+</div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -353,8 +358,24 @@
         </div>
     </div>
     
-    <footer class="bg-light text-dark py-4">
-        <div class="container text-center">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="font-lora">HealthTrack</h3>
+                    <p>Your trusted partner in understanding and tracking your BMI. We are dedicated to providing you with the tools and information you need to lead a healthier life.</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="font-lora">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#about-bmi">About BMI</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+            </div>
         </div>
     </footer>
 
