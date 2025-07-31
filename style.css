@@ -1,185 +1,402 @@
 
-/* --- General Body and Bright Theme --- */
+/* --- Base & Typography --- */
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-dark: #111827;
+    --color-light: #f9fafb;
+    --color-text: #374151;
+    --color-text-light: #6b7280;
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #FFFFFF; /* NEW: Clean white background */
-    color: #333333; /* NEW: Dark text for high contrast and readability */
-    font-family: 'Inter', sans-serif;
-    padding-top: 56px;
+    font-family: var(--font-primary);
+    background-color: var(--color-light);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.6;
 }
 
-/* --- Navigation Bar --- */
-.navbar-brand {
-    letter-spacing: 1px;
+.font-lora {
+    font-family: var(--font-secondary);
 }
 
-/* --- Hero Section --- */
-.hero {
-    /* UPDATED: Switched to a bright, positive gradient.
-       Remember to replace the placeholder URL with a bright, high-quality image. */
-    background: linear-gradient(to right, rgba(32, 201, 151, 0.8), rgba(23, 162, 184, 0.8)), url('https://i.pinimg.com/1200x/af/9c/39/af9c3961cf6faa905f702151c1162e2f.jpg') no-repeat center center/cover;
-    height: 75vh;
-    min-height: 400px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* --- Custom Button --- */
-.custom-btn {
-    padding: 12px 30px;
-    font-weight: 600; /* Bolder text */
-    border-radius: 50px;
-    transition: all 0.5s ease;
-    background-color: #20c997; /* NEW: Primary accent color */
-    color: #FFFFFF; /* NEW: White text */
-    border: 2px solid #20c997;
-}
-
-.custom-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.4); /* UPDATED: Shadow matches new color */
-    background-color: #17a2b8; /* UPDATED: Hover color */
-    border-color: #17a2b8;
-}
-
-/* --- Calculator Section --- */
-#calculator {
-    background-color: #f8f9fa; /* NEW: Light grey for section separation */
-}
-
-.calculator-card {
-    background-color: #FFFFFF; /* NEW: White card */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* UPDATED: Softer shadow */
-    border: 1px solid #EAEAEA; /* UPDATED: Light border */
-}
-
-.form-control {
-    background-color: #FFFFFF; /* NEW */
-    border: 1px solid #ced4da; /* NEW */
-    color: #333333; /* NEW */
-}
-
-.form-control:focus {
-    background-color: #FFFFFF;
-    border-color: #424e4b; /* UPDATED: Primary accent color */
-    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25); /* UPDATED */
-    color: #333333;
-}
-
-.form-control::placeholder {
-    color: #adb5bd;
-}
-
-#result {
-    font-weight: bold;
-    color: #45685d; /* UPDATED: Primary accent color */
-}
-
-/* --- About Section --- */
-#about {
-    background-color: #FFFFFF; /* NEW: Clean white background */
+.section {
     padding: 5rem 0;
 }
 
-#about h2{
-        font-family:Georgia, serif;
-    color: #168b8f; /* Consistent dark text */
-}
-#about h5, #about p.lead {
-        font-family:Georgia, serif;
-    color: #333; /* Consistent dark text */
+.bg-white {
+    background-color: #fff;
 }
 
-#about h5 {
-    font-family:Georgia, serif;
-    font-weight: 100; /* Increased weight for better readability */
-}
-.limitaions {
-    font-weight: 100; /* Increased weight for better readability */
-    color: #6c757d; /* Muted text color */
-}
-
-.general-graph {
-    width: 90%;
-    height: auto;
-    margin-top: 2rem;
-    border-radius: 4px;
-}
-
-#about .table {
-    border-radius: 1rem;
-    overflow: hidden;
-    /* For a light theme, remove the .table-dark class from your HTML table */
-}
-
-/* --- Modal Styles --- */
-/* The existing modal style is already light and looks good, we'll just update the accent colors */
-.modal-content {
-    border-radius: 1rem;
-    overflow: hidden;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-.modal-header {
-    border-bottom: none;
-    padding: 1.5rem 2rem 0.5rem 2rem;
-}
-.modal-title {
+.section-title {
+    font-size: 2.25rem;
     font-weight: 700;
-    color: #2c3e50;
-    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
-.modal-body {
-    padding: 1.5rem 2rem 2rem 2rem;
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    max-width: 48rem;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    line-height: 1.75;
 }
-.form-label {
-    font-weight: 600;
-    color: #34495e;
+
+/* --- Navigation --- */
+.navbar {
+    background-color: black;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 0.75rem 0;
 }
-.form-control-lg {
-    border-radius: 0.75rem;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid #ced4da;
-    transition: all 0.3s ease;
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.form-control-lg:focus {
-    border-color: #20c997; /* UPDATED */
-    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25); /* UPDATED */
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
 }
+
+.nav-links {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-buttons {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    color: white;
+    transition: background-color 0.3s;
+}
+
 .btn-primary {
-    border-radius: 0.75rem;
-    padding: 0.75rem 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #15644c, #0d5560); /* UPDATED */
-    border: none;
-    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3); /* UPDATED */
-    transition: all 0.3s ease;
+    background-color: var(--color-primary);
 }
 .btn-primary:hover {
-    background: linear-gradient(45deg, #17a2b8, #3a8f75); /* UPDATED */
-    box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4); /* UPDATED */
-    transform: translateY(-2px);
+    background-color: var(--color-primary-dark);
 }
-.text-muted a {
+
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.mobile-menu-btn .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.mobile-menu {
+    display: none;
+    margin-top: 1rem;
+}
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #d1d5db;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+.mobile-link:hover {
+    background-color: #1f2937;
+}
+.mobile-link.btn-primary {
+    text-align: center;
+    margin: 0.5rem 1rem 0 1rem;
+}
+
+.mobile-menu-divider {
+    border-top: 1px solid #374151;
+    margin: 0.5rem 1rem;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 333px;
+    padding: 6rem 1.5rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    color: #e5e7eb;
+    max-width: 48rem;
+    margin: 0 auto 2rem auto;
+}
+
+.btn-hero {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.btn-hero:hover {
+    background-color: #e5e7eb;
+}
+
+/* --- Calculator --- */
+.calculator-wrapper {
+    max-width: 56rem;
+    margin: auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-xl);
+    padding: 2rem;
+    transition: box-shadow 0.3s ease;
+}
+.calculator-wrapper:hover {
+    box-shadow: var(--shadow-2xl, 0 25px 50px -12px rgba(0,0,0,0.25));
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.btn-calculate {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.btn-calculate:active {
+    transform: scale(0.95);
+}
+
+.result-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-container h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+.result-container #bmi-value {
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 0.75rem 0;
+}
+.result-container #bmi-category {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.error-message {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+    display: none;
+}
+
+/* --- Cards --- */
+.card.tip-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+.formula-group {
+    margin-bottom: 1rem;
+}
+.formula-group h4 {
+    font-size: 1.125rem;
     font-weight: 600;
-    color: #20c997; /* UPDATED */
+    margin: 0 0 0.5rem 0;
 }
-.modal-illustration .icon {
-    font-size: 4rem;
-    color: #20c997; /* UPDATED */
-}
-
-/* --- Responsive Adjustments (No changes needed) --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero p { font-size: 1rem; }
-    .calculator-card { padding: 2rem; }
-    .modal-dialog { margin: 1rem; }
-    .modal-body { padding: 1rem 1.5rem; }
-    .modal-title { font-size: 1.5rem; }
+.formula-group p {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    margin: 0;
 }
 
-/* --- Footer --- */
-footer {
-    background-color: #f8f9fa !important; /* NEW: Light footer */
-    color: #333 !important; /* NEW */
-    padding: 2rem 0; /* Optional: Add some padding */
-    text-align: center; /* Optional */
+.category-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+.category-list li {
+    display: flex;
+    align-items: center;
+}
+.dot {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 1px solid;
+}
+.dot-blue { background-color: #bfdbfe; border-color: #93c5fd; }
+.dot-green { background-color: #bbf7d0; border-color: #86efac; }
+.dot-yellow { background-color: #fef08a; border-color: #fde047; }
+.dot-red { background-color: #fecaca; border-color: #f87171; }
+
+.feature-grid, .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.feature-card, .tip-card {
+    text-align: center;
+}
+
+.feature-icon-wrapper {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+}
+.bg-indigo-100 { background-color: #e0e7ff; }
+.text-indigo-600 { color: #4f46e5; }
+.bg-green-100 { background-color: #dcfce7; }
+.text-green-600 { color: #16a34a; }
+.bg-red-100 { background-color: #fee2e2; }
+.text-red-600 { color: #dc2626; }
