@@ -8,13 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="images/icon.jpeg">
 
 </head>
 
 <body>
-<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
@@ -40,13 +39,12 @@
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Track</a>
+                        <a class="nav-link" href="track.html" data-bs-toggle="modal" data-bs-target="#signupModal">Track</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- background image -->
     <header class="hero text-white text-center d-flex align-items-center"
         style="background: linear-gradient(to right, rgba(32, 201, 151, 0.8), rgba(23, 162, 184, 0.8)), url('https://i.pinimg.com/1200x/af/9c/39/af9c3961cf6faa905f702151c1162e2f.jpg') no-repeat center center/cover; height: 75vh; min-height: 400px;">
         <div class="container">
@@ -56,7 +54,6 @@
             <a href="#calculator" class="btn btn-primary btn-lg custom-btn">Calculate Your BMI</a>
         </div>
     </header>
-    <!-- calculator -->
     <section id="calculator" class="py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -86,27 +83,22 @@
             </div>
         </div>
     </section>
-<!-- About -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mt-5 mb-5">
+            <div class="text-center mb-5">
                 <h2>What is BMI?</h2>
                 <p class="lead">Body Mass Index (BMI) is a measure that uses your height and weight to work out if your
                     weight is healthy.</p>
             </div>
-            </section>
-        
-    </div>
 
-
-            <div class="row align-items-center mb-5">
+            <div class="row align-items-center justify-content-center mb-5">
                 <div class="col-md-4 text-center">
-                    <img src="images/WhatsApp Image 2025-07-24 at 9.23.06 PM.jpeg" class="img-fluid rounded-3 mb-4"
+                    <img src="images/WhatsApp Image 2025-07-24 at 9.23.06 PM.jpeg" class="img-fluid rounded-3 mb-3"
                         alt="BMI info image">
                 </div>
-                <div class="col-md-8">
-                    <table class="table table-striped table-hover rounded-3 overflow-hidden">
-                        <thead>
+                <div class="col-md-7">
+                    <table class="table table-striped table-hover rounded-3 overflow-hidden shadow-sm">
+                        <thead class="table-dark">
                             <tr>
                                 <th scope="col">BMI Range</th>
                                 <th scope="col">Weight Status</th>
@@ -135,193 +127,209 @@
             </div>
 
             <h5 class="text-center">The BMI Calculator helps assess your Body Mass Index (BMI), which is a measure of
-                body fat based on
-                height and weight. As shown in the chart below, BMI values are calculated by combining your height and
-                weight measurements to determine which health category you fall into. It's a simple yet effective tool
-                widely used to identify weight categories that may lead to health problems.</h5>
-            <img class="img-fluid rounded-4 d-block mx-auto mb-4 w-75" src="images/bmi-chart.avif" alt="BMI Graph">
+                body fat based on height and weight. As shown in the chart below, BMI values are calculated by combining
+                your height and weight measurements to determine which health category you fall into. It's a simple yet
+                effective tool widely used to identify weight categories that may lead to health problems.</h5>
+            <img class="img-fluid rounded-4 d-block mx-auto my-4 w-75" src="images/bmi-chart.avif" alt="BMI Graph">
 
-            <!-- Why BMI is Important Section -->
-        <section id="why-important" class="section bg-white">
-            <div class="container">
-                <h2 class="section-title font-lora">Why is BMI Important?</h2>
-                <div class="feature-grid">
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
-                            <i class="fas fa-heart-pulse fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Health Assessment</h3>
-                        <p>BMI is a simple tool to screen for weight categories that may lead to health problems, providing a general indicator of potential risks.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
-                            <i class="fas fa-users-line fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Population Studies</h3>
-                        <p>Researchers use BMI to track obesity trends, helping to form public health policies and initiatives for entire populations.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
-                            <i class="fas fa-bullseye fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Personal Goal Setting</h3>
-                        <p>Knowing your BMI is a starting point for setting personal health goals, in consultation with a healthcare provider.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-
-        <!-- Limitations of BMI Section -->
-        <section id="limitations" class="section bg-white">
-            <div class="container">
-                <h2 class="section-title font-lora">Limitations of BMI</h2>
-                <div class="feature-grid">
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-red-100 text-red-600">
-                            <i class="fas fa-dumbbell fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Muscle vs. Fat</h3>
-                        <p>BMI does not differentiate between body fat and muscle mass. Muscular individuals can be classified as overweight.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-red-100 text-red-600">
-                            <i class="fas fa-street-view fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Fat Distribution</h3>
-                        <p>It doesn't account for where fat is stored. Visceral fat (around the abdomen) is more harmful than fat elsewhere.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <div class="feature-icon-wrapper bg-red-100 text-red-600">
-                            <i class="fas fa-globe-americas fa-2x"></i>
-                        </div>
-                        <h3 class="card-title font-lora">Population-Specific</h3>
-                        <p>Standard BMI ranges are based on Western populations and may not be accurate for people of different ethnic backgrounds.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Tips & Precautions Section -->
-        <section id="tips" class="section">
-            <div class="container">
-                <h2 class="section-title font-lora">Healthy Tips & Precautions</h2>
-                <div class="tips-grid">
-                    <div class="card tip-card">
-                        <div class="feature-icon-wrapper bg-green-100 text-green-600">
-                            <i class="fas fa-utensils fa-2x"></i>
-                        </div>
-                        <section id="precautions" class="precautions-section">
-    <div class="container">
-        <h2 class="section-title">Health Tips & Precautions</h2>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="precaution-card">
-                    <h4><i class="fas fa-utensils me-2 text-primary"></i>Healthy Eating</h4>
-                    <ul>
-                        <li>Focus on fruits, vegetables, whole grains, and lean proteins</li>
-                        <li>Control portion sizes to avoid overeating</li>
-                        <li>Limit processed foods, sugary drinks, and excessive salt</li>
-                        <li>Stay hydrated by drinking plenty of water</li>
-                        <li>Practice mindful eating - pay attention to hunger and fullness cues</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-            
         </div>
-                    </div>
-                    <div class="card tip-card">
-                        <div class="feature-icon-wrapper bg-green-100 text-green-600">
-                            <i class="fas fa-person-walking fa-2x"></i>
+    </section>
+
+    <section id="why-important" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Why is BMI Important?</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <div class="card feature-card text-center h-100">
+                        <div class="card-body">
+                             <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-heart-pulse fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Health Assessment</h3>
+                            <p>BMI is a simple tool to screen for weight categories that may lead to health problems, providing a general indicator of potential risks.</p>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                <div class="precaution-card">
-                    <h4><i class="fas fa-running me-2 text-primary"></i>Physical Activity</h4>
-                    <ul>
-                        <li>Aim for at least 150 minutes of moderate activity per week</li>
-                        <li>Include both cardio and strength training exercises</li>
-                        <li>Find activities you enjoy to make exercise sustainable</li>
-                        <li>Break up sitting time with short movement breaks</li>
-                        <li>Gradually increase intensity and duration to avoid injury</li>
-                    </ul>
-                </div>
-            </div>
                     </div>
-                    <div class="card tip-card">
-                        <div class="feature-icon-wrapper bg-green-100 text-green-600">
-                            <i class="fas fa-balance-scale fa-2x"></i>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-users-line fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Population Studies</h3>
+                            <p>Researchers use BMI to track obesity trends, helping to form public health policies and initiatives for entire populations.</p>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                <div class="precaution-card">
-                    <h4><i class="fas fa-bed me-2 text-primary"></i>Lifestyle Factors</h4>
-                    <ul>
-                        <li>Get 7-9 hours of quality sleep each night</li>
-                        <li>Manage stress through relaxation techniques</li>
-                        <li>Avoid smoking and limit alcohol consumption</li>
-                        <li>Schedule regular health check-ups</li>
-                        <li>Set realistic health goals and track progress</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-            <img class="img-fluid rounded-4 d-block mx-auto mb-4 w-25" src="images\WhatsApp Image 2025-07-25 at 12.06.15 PM.jpeg">
-            <div class="text-center mt-5">
-                <h2>References</h2>
-                <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank">World
-                    Health Organization - BMI Calculator</a>
+                <div class="col-md-4">
+                     <div class="card feature-card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-bullseye fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Personal Goal Setting</h3>
+                            <p>Knowing your BMI is a starting point for setting personal health goals, in consultation with a healthcare provider.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="signupModalLabel">Create Account</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <section id="limitations" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Limitations of BMI</h2>
+             <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <div class="card feature-card text-center h-100">
+                         <div class="card-body">
+                            <div class="feature-icon-wrapper bg-red-100 text-red-600">
+                                <i class="fas fa-dumbbell fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Muscle vs. Fat</h3>
+                            <p>BMI does not differentiate between body fat and muscle mass. Muscular individuals can be classified as overweight.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-red-100 text-red-600">
+                                <i class="fas fa-street-view fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Fat Distribution</h3>
+                            <p>It doesn't account for where fat is stored. Visceral fat (around the abdomen) is more harmful than fat elsewhere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-red-100 text-red-600">
+                                <i class="fas fa-globe-americas fa-2x"></i>
+                            </div>
+                            <h3 class="card-title">Population-Specific</h3>
+                            <p>Standard BMI ranges are based on Western populations and may not be accurate for people of different ethnic backgrounds.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="text-center mb-3">
-                    <i class="fas fa-user-plus icon fa-2x"></i>
+        </div>
+    </section>
+    
+    <section id="tips" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Healthy Tips & Precautions</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 text-center shadow-sm">
+                         <div class="card-body">
+                            <div class="feature-icon-wrapper bg-green-100 text-green-600">
+                                <i class="fas fa-utensils fa-2x"></i>
+                            </div>
+                            <h4 class="card-title mt-3">Healthy Eating</h4>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Focus on fruits, vegetables, and lean proteins.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Control portion sizes to avoid overeating.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Limit processed foods and sugary drinks.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Stay hydrated by drinking plenty of water.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- signup -->
-                <form id="signupForm">
-                    <div class="mb-3">
-                        <label for="modalSignupUsername" class="form-label">Username</label>
-                        <input type="text" class="form-control form-control-lg" id="modalSignupUsername"
-                            placeholder="Choose a username" required>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-green-100 text-green-600">
+                                <i class="fas fa-person-walking fa-2x"></i>
+                            </div>
+                            <h4 class="card-title mt-3">Physical Activity</h4>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Aim for 150+ minutes of moderate activity weekly.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Include both cardio and strength training.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Find activities you enjoy to stay consistent.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Break up long periods of sitting.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="modalSignupEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control form-control-lg" id="modalSignupEmail"
-                            placeholder="Enter your email address" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="modalSignupPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control form-control-lg" id="modalSignupPassword"
-                            placeholder="Create a strong password" required>
-                    </div>
-                    <div class="d-grid mt-4">
-                        <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-                    </div>
-                </form>
+                </div>
 
-                <p class="text-center text-muted mt-4">
-                    Already have an account?
-                    <a href="#" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Log in here
-                    </a>
-                </p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="feature-icon-wrapper bg-green-100 text-green-600">
+                                <i class="fas fa-balance-scale fa-2x"></i>
+                            </div>
+                            <h4 class="card-title mt-3">Lifestyle Factors</h4>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Get 7-9 hours of quality sleep each night.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Manage stress through relaxation techniques.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Avoid smoking and limit alcohol intake.</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Schedule regular health check-ups.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+             <img class="img-fluid rounded-4 d-block mx-auto mb-4 w-25" src="images/WhatsApp Image 2025-07-25 at 12.06.15 PM.jpeg" alt="Healthy Lifestyle Image">
+            <div class="text-center">
+                <h2>References</h2>
+                <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" class="btn btn-outline-primary">
+                    World Health Organization
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <i class="fas fa-user-plus icon fa-2x"></i>
+                    </div>
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="modalSignupUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control form-control-lg" id="modalSignupUsername"
+                                placeholder="Choose a username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalSignupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg" id="modalSignupEmail"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalSignupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-lg" id="modalSignupPassword"
+                                placeholder="Create a strong password" required>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                        </div>
+                    </form>
+                    <p class="text-center text-muted mt-4">
+                        Already have an account?
+                        <a href="#" class="text-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Log in here
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -332,7 +340,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-3">
-                        <i class="fas fa-sign-in-alt icon"></i>
+                        <i class="fas fa-sign-in-alt icon fa-2x"></i>
                     </div>
                     <form>
                         <div class="mb-3">
@@ -358,23 +366,26 @@
         </div>
     </div>
     
-    <footer class="footer">
+    <footer class="footer bg-dark text-white pt-5 pb-4">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="font-lora">HealthTrack</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="font-lora">BMI Tracker</h3>
                     <p>Your trusted partner in understanding and tracking your BMI. We are dedicated to providing you with the tools and information you need to lead a healthier life.</p>
                 </div>
-                <div class="footer-col">
+                <div class="col-md-3 mb-4">
                     <h3 class="font-lora">Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#calculator">Calculator</a></li>
-                        <li><a href="#about-bmi">About BMI</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Home</a></li>
+                        <li><a href="#calculator" class="text-white-50">Calculator</a></li>
+                        <li><a href="#about" class="text-white-50">About BMI</a></li>
+                        <li><a href="#tips" class="text-white-50">Tips</a></li>
                     </ul>
                 </div>
                 
+            </div>
+            <div class="text-center text-white-50 pt-3 border-top border-secondary">
+               
             </div>
         </div>
     </footer>
@@ -383,5 +394,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-</html>
