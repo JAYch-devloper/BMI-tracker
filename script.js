@@ -114,3 +114,113 @@ const bmiHistory = JSON.parse(localStorage.getItem('bmiHistory')) || [];
                 }
             }
         });
+// --- BMI Tracker Script ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the tracker form exists on the page before running the script
+    if (document.getElementById('bmiTrackerForm')) {
+        const bmiForm = document.getElementById('bmiTrackerForm');
+        const resultDiv = document.getElementById('trackerResult');
+        const historyTableBody = document.getElementById('historyTableBody');
+        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        const chartCanvas = document.getElementById('bmiChart');
+        let bmiChart;
+
+        let bmiHistory = JSON.parse(localStorage.getItem('bmiHistory')) || [];
+
+        const calculateBmi = (weight, height) => {
+            const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+            let status = '';
+            if (bmi < 18.5) status = 'Underweight';
+            else if (bmi < 25) status = 'Healthy';
+            else if (bmi < 30) status = 'Overweight';
+            else status = 'Obesity';
+            return { bmi, status };
+        };
+
+        const renderAll = () => {
+            renderTable();
+            renderChart();
+        };
+
+        const renderTable = () => {
+            historyTableBody.innerHTML = '';
+            if (bmiHistory.length === 0) {
+                historyTableBody.innerHTML = '<tr><td colspan="3" class="text-center text-muted">No history yet.</td></tr>';
+                return;
+            }
+            bmiHistory.forEach(entry => {
+                const statusClass = entry.status === 'Healthy' ? 'success' : (entry.status === 'Underweight' ? 'primary' : 'warning');
+                const row = `<tr>
+                    <td>${entry.date}</td>
+                    <td>${entry.bmi}</td>
+                    <td><span class="badge bg-${statusClass}">${entry.status}</span></td>
+                </tr>`;
+                historyTableBody.insertAdjacentHTML('beforeend', row);
+            });
+        };
+
+        const renderChart = () => {
+            if (bmiChart) bmiChart.destroy();
+            const labels = bmiHistory.map(entry => entry.date);
+            const data = bmiHistory.map(entry => entry.bmi);
+            const primaryColor = '#2563eb';
+            const primaryColorTransparent = 'rgba(37, 99, 235, 0.1)';
+
+            bmiChart = new Chart(chartCanvas, {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Your BMI Over Time',
+                        data,
+                        borderColor: primaryColor,
+                        backgroundColor: primaryColorTransparent,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: primaryColor,
+                        pointHoverRadius: 7,
+                        pointHoverBackgroundColor: primaryColor,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { grid: { drawBorder: false } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        };
+
+        bmiForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+                resultDiv.innerHTML = `<div class="alert alert-danger mt-3">Please enter valid data.</div>`;
+                return;
+            }
+            const { bmi, status } = calculateBmi(weight, height);
+            const date = new Date().toLocaleDateString('en-GB');
+            bmiHistory.push({ date, bmi, status });
+            localStorage.setItem('bmiHistory', JSON.stringify(bmiHistory));
+            resultDiv.innerHTML = `<div class="alert alert-success mt-3">New entry added: BMI of ${bmi}.</div>`;
+            bmiForm.reset();
+            renderAll();
+        });
+
+        clearHistoryBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to clear all history?')) {
+                bmiHistory = [];
+                localStorage.removeItem('bmiHistory');
+                renderAll();
+                resultDiv.innerHTML = `<div class="alert alert-info mt-3">Your history has been cleared.</div>`;
+            }
+        });
+
+        renderAll();
+    }
+});
