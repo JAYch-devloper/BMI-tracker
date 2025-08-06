@@ -581,3 +581,125 @@ html {
     transform: translateY(-5px); 
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
 }
+/* --- BMI Tracker Styles (Conflict-Free) --- */
+
+.bmi-tracker-container {
+    /* Scoping variables to avoid global conflicts */
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-dark: #111827;
+    --color-light: #f9fafb;
+    --color-text: #374151;
+    --color-text-light: #6b7280;
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.07);
+    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    
+    font-family: var(--font-primary);
+    background-color: var(--color-light);
+    color: var(--color-text);
+}
+
+.bmi-tracker-container .font-lora {
+    font-family: var(--font-secondary);
+}
+
+.bmi-tracker-container .hero {
+    height: 60vh;
+    min-height: 350px;
+    background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+}
+
+.bmi-tracker-container .custom-btn {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.bmi-tracker-container .custom-btn:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.bmi-tracker-container .btn-light.custom-btn {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: var(--color-dark);
+}
+
+.bmi-tracker-container .btn-light.custom-btn:hover {
+    background-color: #e2e6ea;
+    border-color: #e2e6ea;
+}
+
+.bmi-tracker-container .calculator-card, 
+.bmi-tracker-container .card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.bmi-tracker-container .calculator-card:hover, 
+.bmi-tracker-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.bmi-tracker-container .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+}
+
+.bmi-tracker-container .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.bmi-tracker-container .table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.bmi-tracker-container .table thead th {
+    border: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding-top: 0;
+}
+
+.bmi-tracker-container .table tbody tr {
+    background-color: var(--color-light);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.bmi-tracker-container .table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.bmi-tracker-container .table tbody td {
+    border: none;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.bmi-tracker-container .table tbody td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.bmi-tracker-container .table tbody td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
